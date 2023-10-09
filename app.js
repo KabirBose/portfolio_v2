@@ -1,24 +1,24 @@
 // initial setup
 const express = require("express");
+const expressLayouts = require("express-ejs-layouts");
 const app = express();
-const PORT = 3000;
+const port = 3000;
 
 // use static files
 app.use(express.static("public"));
 app.use("/css", express.static(__dirname + "public/css"));
-app.use("/js", express.static(__dirname + "public/js"));
-app.use("/img", express.static(__dirname + "public/img"));
 
 // set view engine
+app.use(expressLayouts);
 app.set("views", "./views");
 app.set("view engine", "ejs");
 
 // homepage
 app.get("", (req, res) => {
-  res.render("index");
+  res.render("navbar");
 });
 
 // express server configs
-app.listen(PORT, () => {
-  console.log(`Listening on port http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`Listening on port http://localhost:${port}`);
 });
