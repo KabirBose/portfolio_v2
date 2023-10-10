@@ -28,6 +28,11 @@ app.get("/projects", (req, res) => {
   res.render("projects");
 });
 
+// contact
+app.get("/contact", (req, res) => {
+  res.render("contact");
+});
+
 // express server configs
 app.listen(port, () => {
   console.log(`Listening on port http://localhost:${port}`);
