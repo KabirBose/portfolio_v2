@@ -1,7 +1,10 @@
 // initial setup
 const express = require("express");
+const expressLayouts = require("express-ejs-layouts");
 const app = express();
 const port = 3000;
+
+app.use(expressLayouts);
 
 // use static files
 app.use(express.static("public"));
