@@ -124,3 +124,9 @@ button {
   padding-bottom: 10px;
   border: none;
 }
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+}
