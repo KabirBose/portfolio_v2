@@ -10,7 +10,8 @@ nav {
   margin: 0 auto;
   background-color: rgb(245, 245, 245);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 25px;
   align-items: center;
 }
 .links-container {
