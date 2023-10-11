@@ -61,23 +61,38 @@ a:hover {
 /* About page */
 .container {
   margin: 0 auto;
+  margin-top: 30px;
   width: 90%;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+.abt-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
 .about-p {
   font-size: 1.4rem;
   text-align: center;
   line-height: 35px;
+  width: 30rem;
 }
 .intro-img {
   width: 300px;
   height: 300px;
   object-fit: cover;
   border-radius: 10px;
+  box-shadow: 1px 1px 10px rgb(104, 104, 104);
+}
+video {
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgb(104, 104, 104);
 }
 
 /* Projects page */
@@ -189,5 +204,8 @@ footer {
   }
   .bar {
     display: none;
+  }
+  .about-p {
+    width: 20rem;
   }
 }
