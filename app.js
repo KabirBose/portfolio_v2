@@ -1,6 +1,7 @@
 // initial setup
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
+const pagesRouter = require("./routes/pages");
 const app = express();
 const port = 3000;
 
@@ -13,25 +14,7 @@ app.use("/css", express.static(__dirname + "public/css"));
 // set view engine
 app.set("view engine", "ejs");
 
-// homepage
-app.get("", (req, res) => {
-  res.render("index");
-});
-
-// about
-app.get("/about", (req, res) => {
-  res.render("about");
-});
-
-// projects
-app.get("/projects", (req, res) => {
-  res.render("projects");
-});
-
-// contact
-app.get("/contact", (req, res) => {
-  res.render("contact");
-});
+app.use("/", pagesRouter);
 
 // express server configs
 app.listen(port, () => {
