@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node ./config/app.js"
   },
   "author": "Kabir Bose",
   "license": "ISC",
@@ -13,6 +13,7 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-ejs-layouts": "^2.5.1",
+    "mongoose": "^8.0.0",
     "nodemon": "^3.0.1"
   }
 }
