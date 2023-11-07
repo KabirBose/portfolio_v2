@@ -25,10 +25,8 @@ app.use("/css", express.static(__dirname + "public/css"));
 app.set("view engine", "ejs");
 
 const pagesRouter = require("../routes/pages");
-const projectsRouter = require("../routes/projects");
 
 app.use("/", pagesRouter);
-app.use("/myprojects", projectsRouter);
 
 // express server configs
 app.listen(port, () => {
