@@ -2,6 +2,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const expressLayouts = require("express-ejs-layouts");
+const pagesRouter = require("../routes/pages");
 const DB = require("./db");
 
 const app = express();
@@ -23,8 +24,6 @@ app.use("/css", express.static(__dirname + "public/css"));
 
 // set view engine
 app.set("view engine", "ejs");
-
-const pagesRouter = require("../routes/pages");
 
 app.use("/", pagesRouter);
 
